@@ -9,7 +9,7 @@ RUN mvn clean package -DskipTests
 
 FROM openjdk:11-jdk-slim
 
-COPY --from=build /app/target/BackIpsSaniUis-0.0.1-SNAPSHOT.jar /app/BackIpsSaniUis.jar
+COPY --from=build /app/target/*.jar /app/BackIpsSaniUis.jar
 
 EXPOSE 8080
 
